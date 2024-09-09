@@ -17,3 +17,8 @@
   scroll-behavior: smooth;
 }
 
+.home-page:hover{
+  background-color: azure;
+  cursor: pointer;
+}
+
