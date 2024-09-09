@@ -1,7 +1,5 @@
 import React from 'react'
 import {FaLinkedin, FaGithub} from "react-icons/fa"
-import 'animate.css';
-
 
 const Navbar = () => {
   return (
@@ -17,7 +15,7 @@ const Navbar = () => {
               <FaLinkedin />
             </a>
 
-            <a href='https://www.github.com/StevenTB1' target="_blank" rel="noopener noreferrer" alt="LinkedIn">
+            <a href='https://www.github.com/StevenTB1' target="_blank" rel="noopener noreferrer" alt="Github">
               <FaGithub />
             </a>
         </div>
