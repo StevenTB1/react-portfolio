@@ -13,6 +13,15 @@
   color-scheme: dark;
 }
 
+.example::-webkit-scrollbar {
+  display: none;
+}
+
+.example {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 * {
   scroll-behavior: smooth;
 }

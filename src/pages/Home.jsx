@@ -1,8 +1,9 @@
 import React from 'react';
-import Navbar from '../components/Navbar.jsx';
-import Hero from '../components/Hero.jsx';
-import About from '../components/about.jsx';
-import { motion } from "framer-motion";
+import Navbar from '../components/Home/Navbar.jsx';
+import Hero from '../components/Home/Hero.jsx';
+import About from '../components/Home/About.jsx';
+import Tools from '../components/Home/Tools.jsx';
+import Contact from '../components/Home/Contact.jsx';
 
 const Home = () => {
     return(
@@ -13,7 +14,9 @@ const Home = () => {
                 <div className='container px-8'>
                     <Navbar />
                     <Hero />
-                    <About />                
+                    <About />
+                    <Tools />
+                    <Contact />
                 </div>
             </div>
         </>
