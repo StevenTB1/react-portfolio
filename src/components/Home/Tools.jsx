@@ -2,9 +2,9 @@ import React from 'react'
 import { RiReactjsLine } from 'react-icons/ri';
 import { SiMongodb } from "react-icons/si";
 import { FaNodeJs } from "react-icons/fa";
-import { IoLogoJavascript } from "react-icons/io5";
-import { FaHtml5 } from "react-icons/fa";
-import { IoLogoCss3 } from "react-icons/io";
+import { FaFlask } from "react-icons/fa";
+import { SiNextdotjs } from "react-icons/si";
+import { SiTypescript } from "react-icons/si";
 import {motion} from "framer-motion";
 
 const iconVariants = (duration) => ({
@@ -22,7 +22,7 @@ const iconVariants = (duration) => ({
 
 const Tools = () => {
   return (
-    <div className='border-b-2 border-neutral-500 my-20'>
+    <div className='border-b-2 border-neutral-500 mt-20 mb-5'>
       <h1 className='my-14 text-center text-4xl bg-gradient-to-r from-blue-300 via-indigo-400 to-purple-200 bg-clip-text text-transparent'>Techonologies</h1>
       <motion.div 
        whileInView={{opacity: 1, x: 0}}
@@ -67,7 +67,7 @@ const Tools = () => {
         whilehover={{scale: 1.1}}
         whileTap={{scale: 1.05}}
         className='rounded-2xl border-4 border-neutral-800 p-4'>
-            <IoLogoJavascript className='text-7xl text-yellow-300'/>
+            <FaFlask className='text-7xl text-yellow-300'/>
         </motion.div>
 
         <motion.div
@@ -77,7 +77,7 @@ const Tools = () => {
         whilehover={{scale: 1.1}}
         whileTap={{scale: 1.05}}
         className='rounded-2xl border-4 border-neutral-800 p-4'>
-            <FaHtml5 className='text-7xl text-yellow-600'/>
+            <SiNextdotjs className='text-7xl text-white'/>
         </motion.div>
         
         <motion.div
@@ -87,7 +87,7 @@ const Tools = () => {
         whilehover={{scale: 1.1}}
         whileTap={{scale: 1.05}}
         className='rounded-2xl border-4 border-neutral-800 p-4'>
-            <IoLogoCss3 className='text-7xl text-blue-500'/>
+            <SiTypescript className='text-7xl text-blue-400'/>
         </motion.div>
       </motion.div>
     </div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import AboutPicture from '../../assets/images/about.png'
+import { Link } from 'react-router-dom'
 import {motion} from "framer-motion"
 
 const container = (delay) => ({
@@ -29,7 +30,7 @@ const About = () => {
           </p>
 
           <div className='flex justify-center items-center'>
-            <a className="hover:bg-neutral-500 transition-colors duration-200 text-2xl lg:mt-10 bg-neutral-800 border-2 border-neutral-500 p-4 rounded-lg" href="">Learn More</a>
+            <Link className="hover:bg-neutral-500 transition-colors duration-200 text-2xl lg:mt-10 bg-neutral-800 border-2 border-neutral-500 p-4 rounded-lg" to="/Projects">Learn More</Link>
           </div>
         </div>
 

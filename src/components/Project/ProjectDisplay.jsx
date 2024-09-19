@@ -1,34 +1,53 @@
-// import Image from "next/image"
+import SaveSquad from '../../assets/images/SaveSquad.png';
+import Portfolio from '../../assets/images/website.png';
+import BlueK from '../../assets/images/BlueK.jpg';
+import {Link} from 'react-router-dom'
 import React from 'react'
+import { ExternalLink } from 'lucide-react';
+import {motion} from "framer-motion";
 
 const projects = [
   {
-    title: "Project 1",
-    description: "This is a description of Project 1. It was an exciting venture that showcased various technologies and problem-solving skills.",
-    image: "../../assets/iamges/about.png?height=300&width=400",
-    skills: ["React", "Node.js", "MongoDB"]
+    title: "SaveSquad: Modern Solution for achieving your money saving goals",
+    description: "Developed at Hack the North 2024 under 32 hours in a team of four. Full-stack web app that can tracks user's money saving goals and update them. With friendlist system to compare and contrast the saving amount, and achievements and points system to encourage acheiving goals faster.",
+    link: "https://github.com/StevenTB1/HTN2024",
+    image: `${SaveSquad}`,
+    skills: ["Next.js", "React", "Flask", "MongoDB", "MongoDB Atlas"]
   },
   {
-    title: "Project 2",
-    description: "Project 2 was a challenging endeavor that required innovative thinking and cutting-edge technologies.",
-    image: "../../assets/iamges/about.png?height=300&width=400",
-    skills: ["Vue.js", "Express", "PostgreSQL"]
+    title: "My Personal Website",
+    description: "The current site you are on! As the first front-end project that I've built, I had corporated some popular framworks and libraries like React.js and Tailwind CSS for the overall design. Deployed using Amazon hosting services Lightrail and routing with Route 53.",
+    link: "https://github.com/StevenTB1/react-portfolio",
+    image: `${Portfolio}`,
+    skills: ["React.js", "Tailwind CSS", "Framer Motion", "Vite"]
   },
   {
-    title: "Project 3",
-    description: "For Project 3, we developed a state-of-the-art solution that revolutionized the industry standard.",
-    image: "../../assets/iamges/about.png?height=300&width=400",
-    skills: ["Angular", "Django", "MySQL"]
+    title: "BlueK: Memory Game Solving Robot",
+    description: "First year mechatronics engineering project developed in MTE 100. Using robotC (C++) to implement its game solving logit and Solidworks to draft its mechanical design. With modified and refined testing procedures of the robot to troubleshoot and develop, the robot can solve the memory card flipping game on its own!",
+    link: "https://www.youtube.com/watch?v=CVM30NMXGFQ",
+    image: `${BlueK}`,
+    skills: ["AutoCAD", "Solidworks", "RobotC (C++)"]
   }
 ]
 
-export default function ProjectDisplay() {
+const container = (delay) => ({
+  hidden: {x: -100, opacity: 0},
+  visiable: {x: 0, opacity: 1, transition: {duration: 0.5, delay: delay}
+  }
+});
+
+
+const ProjectDisplay = () => {
   return (
     <div className="min-h-screen">
       <div className="container mx-auto px-4 py-12">
-        <div className="space-y-16">
+      <motion.div 
+        variants={container(1)}
+        initial="hidden"
+        animate="visiable"
+        className="space-y-16">
           {projects.map((project, index) => (
-            <div key={index} className="flex flex-col md:flex-row bg-gray-900 rounded-lg shadow-xl overflow-hidden">
+            <div key={index} className="flex flex-col md:flex-row bg-gray-800 rounded-lg shadow-xl overflow-hidden">
               <div className="md:w-1/2">
                 <img
                   src={project.image}
@@ -42,25 +61,34 @@ export default function ProjectDisplay() {
                 <div>
                   <h2 className="text-3xl font-semibold mb-4 text-white">{project.title}</h2>
                   <p className="text-gray-300 mb-6 text-lg">{project.description}</p>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-3 text-white">Skills Used:</h3>
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {project.skills.map((skill, skillIndex) => (
+                        <span
+                          key={skillIndex}
+                          className="bg-gray-700 text-gray-100 px-3 py-1 rounded-full text-sm"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-3 text-white">Skills Used:</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {project.skills.map((skill, skillIndex) => (
-                      <span
-                        key={skillIndex}
-                        className="bg-gray-800 text-gray-100 px-3 py-1 rounded-full text-sm"
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
+                  <Link
+                    className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+                    to={project.link}>
+                    View Project Link <ExternalLink className="ml-2 h-4 w-4"/>
+                  </Link>
                 </div>
               </div>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   )
 }
+
+export default ProjectDisplay;

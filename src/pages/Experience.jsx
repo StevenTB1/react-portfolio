@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from '../components/Home/Navbar.jsx';
+import Navbar from '../components/common/Navbar.jsx';
 import Landing from '../components/Experience/Landing.jsx';
 import { motion } from "framer-motion";
 

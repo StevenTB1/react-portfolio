@@ -1,7 +1,8 @@
 import React from 'react';
-import Navbar from '../components/Home/Navbar.jsx';
+import Navbar from '../components/common/Navbar.jsx';
 import ProjectDisplay from '../components/Project/ProjectDisplay.jsx';
 import Header from '../components/Project/Header.jsx';
+import Contact from '../components/common/Contact.jsx';
 
 const Projects = () => {
   return (
@@ -12,6 +13,7 @@ const Projects = () => {
                 <Navbar />
                 <Header />       
                 <ProjectDisplay />
+                <Contact />
             </div>
     </div>
   )

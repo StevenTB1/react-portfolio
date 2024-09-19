@@ -1,9 +1,9 @@
 import React from 'react';
-import Navbar from '../components/Home/Navbar.jsx';
+import Navbar from '../components/common/Navbar.jsx';
 import Hero from '../components/Home/Hero.jsx';
 import About from '../components/Home/About.jsx';
 import Tools from '../components/Home/Tools.jsx';
-import Contact from '../components/Home/Contact.jsx';
+import Contact from '../components/common/Contact.jsx';
 
 const Home = () => {
     return(

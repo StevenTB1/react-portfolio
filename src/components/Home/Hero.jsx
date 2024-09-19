@@ -1,52 +1,74 @@
+import { motion } from "framer-motion";
 import ProfilePicture from '../../assets/images/pfp.png'
-import {motion} from "framer-motion";
 
-const container = (delay) => ({
-  hidden: {x: -100, opacity: 0},
-  visiable: {x: 0, opacity: 1, transition: {duration: 0.5, delay: delay}
+const fadeIn = (delay) => ({
+  hidden: { y: 20, opacity: 0 },
+  visible: { 
+    y: 0, 
+    opacity: 1, 
+    transition: { 
+      duration: 0.6, 
+      delay, 
+      ease: "easeOut" 
+    } 
   }
 });
 
 const Hero = () => {
   return (
-    <div className="border-b-2 border-neutral-500 pb-4 lg:mb-35 mb-20">
-      <div className="flex flex-wrap mb-10">
-        <div className="w-full lg:w-1/2">
-            <div className="flex flex-col items-center lg:items-start">
-                <motion.h1 
-                variants={container(0.5)}
-                initial="hidden"
-                animate="visiable"
-                className="lg:pb-16 pb-6 text-5xl font-thin tracking-tight lg:mt-8 lg:text-7xl">Steven Chow</motion.h1>
-
-                <motion.span 
-                variants={container(0.75)}
-                initial="hidden"
-                animate="visiable"className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-3xl lg:text-4xl text-transparent">Mechatronics Engineer</motion.span>
-
-                <motion.p 
-                variants={container(1)}
-                initial="hidden"
-                animate="visiable"
-                className="indent-10 font-mono text-gray-200 my-6 max-w-xl text-xl px-4 py-5 font-light tracking-tighter">I am a passionate mechatronics engineering student in the Unviersity of Waterloo pursuing my undergrad.</motion.p>
-
-                <motion.p 
-                variants={container(1.25)}
-                initial="hidden"
-                animate="visiable"
-                
-                className="indent-10 font-mono text-gray-200 max-w-xl text-xl px-4 font-light tracking-tighter">
-                    With experience of building different projects, I have honed my skill in front-end popular libraries like React and some CSS libraries like tailwind CSS. At the same time, with some mechanical experience in my background, I am familiar with AutoCAD and Solidworks for CAD-ing, and various manufacturing tools.</motion.p>
-            </div>
-        </div>
-        <div className='w-full lg:w-1/2 mx-auto flex justify-center items-center mt-8'>
-              <motion.img 
-              variants={container(1.5)}
-              initial="hidden"
-              animate="visiable"
-              whileHover={{scale: 1.05}}
-              whileTap={{scale: 1.03}}
-              className="max-h-[40rem]" src={ProfilePicture} alt="my picture"/>
+    <div className="border-b-2 border-neutral-500 flex items-center justify-center text-white py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl w-full space-y-20">
+        <div className="flex flex-col lg:flex-row items-center justify-between">
+          <motion.div 
+            className="lg:w-1/2 space-y-6 text-center lg:text-left"
+            initial="hidden"
+            animate="visible"
+          >
+            <motion.h1 
+              variants={fadeIn(0.2)}
+              className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight"
+            >
+              Steven Chow
+            </motion.h1>
+            <motion.span 
+              variants={fadeIn(0.4)}
+              className="block text-2xl sm:text-3xl lg:text-4xl font-semibold bg-gradient-to-r from-pink-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent"
+            >
+              Mechatronics Engineer
+            </motion.span>
+            <motion.p 
+              variants={fadeIn(0.6)}
+              className="mt-3 max-w-md mx-auto lg:mx-0 text-xl text-gray-300 sm:text-2xl md:mt-5 md:max-w-3xl"
+            >
+              Passionate mechatronics engineering student at the University of Waterloo, pursuing my undergrad with a focus on innovative solutions.
+            </motion.p>
+            <motion.p 
+              variants={fadeIn(0.8)}
+              className="mt-3 max-w-md mx-auto lg:mx-0 text-base text-gray-400 sm:text-lg md:mt-5 md:max-w-3xl"
+            >
+              Experienced in front-end development with React and Tailwind CSS. Proficient in AutoCAD and Solidworks for mechanical design, with hands-on manufacturing experience.
+            </motion.p>
+          </motion.div>
+          <motion.div 
+            className="mt-10 lg:mt-0 lg:w-1/2 flex justify-center lg:justify-end"
+            variants={fadeIn(1)}
+            initial="hidden"
+            animate="visible"
+          >
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-2xl"
+            >
+              <img
+                src={ProfilePicture}
+                alt="Steven Chow"
+                layout="fill"
+                objectFit="cover"
+                className="rounded-full"
+              />
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </div>

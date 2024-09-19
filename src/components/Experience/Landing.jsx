@@ -7,7 +7,6 @@ const container = (delay) => ({
   }
 });
 
-
 const Landing = () => {
   return (
     <div className="lg:h-screen border-b-2 border-neutral-500 pb-4 lg:mb-35 mb-20">
@@ -29,7 +28,7 @@ const Landing = () => {
                 variants={container(1)}
                 initial="hidden"
                 animate="visiable"
-                className="indent-10 font-mono text-gray-200 my-6 max-w-xl text-xl px-4 py-5 font-light tracking-tighter">Your mom text</motion.p>
+                className="indent-10 font-mono text-gray-200 my-6 max-w-xl text-xl px-4 py-5 font-light tracking-tighter">work in progress...</motion.p>
 
                 <motion.p 
                 variants={container(1.25)}
@@ -40,15 +39,6 @@ const Landing = () => {
                 </motion.p>
             </div>
         </div>
-        {/* <div className='w-full lg:w-1/2 mx-auto flex justify-center items-center mt-10'>
-              <motion.img 
-              variants={container(1.5)}
-              initial="hidden"
-              animate="visiable"
-              whileHover={{scale: 1.05}}
-              whileTap={{scale: 1.03}}
-              className="max-h-[40rem]" src={} alt="my picture"/>
-        </div> */}
       </div>
     </div>
   )
