@@ -11,21 +11,21 @@ const projects = [
     title: "SaveSquad: Modern Solution for achieving your money saving goals",
     description: "Developed at Hack the North 2024 under 32 hours in a team of four. Full-stack web app that can tracks user's money saving goals and update them. With friendlist system to compare and contrast the saving amount, and achievements and points system to encourage acheiving goals faster.",
     link: "https://github.com/StevenTB1/HTN2024",
-    image: `${SaveSquad}`,
+    image: SaveSquad,
     skills: ["Next.js", "React", "Flask", "MongoDB", "MongoDB Atlas"]
   },
   {
     title: "My Personal Website",
     description: "The current site you are on! As the first front-end project that I've built, I had corporated some popular framworks and libraries like React.js and Tailwind CSS for the overall design. Deployed using Amazon hosting services Lightrail and routing with Route 53.",
     link: "https://github.com/StevenTB1/react-portfolio",
-    image: `${Portfolio}`,
+    image: Portfolio,
     skills: ["React.js", "Tailwind CSS", "Framer Motion", "Vite"]
   },
   {
     title: "BlueK: Memory Game Solving Robot",
     description: "First year mechatronics engineering project developed in MTE 100. Using robotC (C++) to implement its game solving logit and Solidworks to draft its mechanical design. With modified and refined testing procedures of the robot to troubleshoot and develop, the robot can solve the memory card flipping game on its own!",
     link: "https://www.youtube.com/watch?v=CVM30NMXGFQ",
-    image: `${BlueK}`,
+    image: BlueK,
     skills: ["AutoCAD", "Solidworks", "RobotC (C++)"]
   }
 ]
