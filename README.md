@@ -1,8 +1,14 @@
-# React + Vite
+# **Personal Portfolio Website**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A front-end web application aimed to demonstrate my experience and projects.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
+Home Page: Brief rundown of me!
+Expereince Page: Work in progress, showing my experience including education and co-op (intern).
+Project Page: Demonstrating all the main projects I've built on my free time.
+
+
+## 🛠 Tech Stack
+Frontend Framework: React.js & Vite
+Styling Library: Tailwind CSS, Framer Motion, React-icons
