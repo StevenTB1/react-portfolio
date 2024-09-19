@@ -39,17 +39,3 @@ function App(){
 }
 
 export default App;
-
-{/* <Router>
-      <AnimatePresence>
-        <div className="bg-secondary-light dark:bg-primary-dark transition duration-300">
-          <Suspense fallback={"Loading..."}>
-            <Routes>
-              <Route path="/home" element={<Home />} />
-              <Route path="/experience" element={<Experience />} />
-              <Route path="/projects" element={<Projects />} />
-            </Routes>
-          </Suspense>
-        </div>
-      </AnimatePresence>
-</Router> */}

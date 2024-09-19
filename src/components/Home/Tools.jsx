@@ -34,7 +34,7 @@ const Tools = () => {
         variants={iconVariants(2.5)}
         initial= "initial"
         animate="animate" 
-        whileHover={{scale: 1.1}}
+        whilehover={{scale: 1.1}}
         whileTap={{scale: 1.05}}
         className='rounded-2xl border-4 border-neutral-800 p-4'>
             <RiReactjsLine className='text-7xl text-cyan-400'/>
@@ -44,7 +44,7 @@ const Tools = () => {
         variants={iconVariants(3)}
         initial= "initial"
         animate="animate"
-        whileHover={{scale: 1.1}}
+        whilehover={{scale: 1.1}}
         whileTap={{scale: 1.05}}
         className='rounded-2xl border-4 border-neutral-800 p-4'>
             <SiMongodb className='text-7xl text-green-600'/>
@@ -54,7 +54,7 @@ const Tools = () => {
         variants={iconVariants(4)}
         initial= "initial"
         animate="animate"
-        whileHover={{scale: 1.1}}
+        whilehover={{scale: 1.1}}
         whileTap={{scale: 1.05}}
         className='rounded-2xl border-4 border-neutral-800 p-4'>
             <FaNodeJs className='text-7xl text-green-500'/>
@@ -64,7 +64,7 @@ const Tools = () => {
         variants={iconVariants(6)}
         initial= "initial"
         animate="animate"
-        whileHover={{scale: 1.1}}
+        whilehover={{scale: 1.1}}
         whileTap={{scale: 1.05}}
         className='rounded-2xl border-4 border-neutral-800 p-4'>
             <IoLogoJavascript className='text-7xl text-yellow-300'/>
@@ -74,7 +74,7 @@ const Tools = () => {
         variants={iconVariants(5)}
         initial= "initial"
         animate="animate"
-        whileHover={{scale: 1.1}}
+        whilehover={{scale: 1.1}}
         whileTap={{scale: 1.05}}
         className='rounded-2xl border-4 border-neutral-800 p-4'>
             <FaHtml5 className='text-7xl text-yellow-600'/>
@@ -84,7 +84,7 @@ const Tools = () => {
         variants={iconVariants(4.5)}
         initial= "initial"
         animate="animate"
-        whileHover={{scale: 1.1}}
+        whilehover={{scale: 1.1}}
         whileTap={{scale: 1.05}}
         className='rounded-2xl border-4 border-neutral-800 p-4'>
             <IoLogoCss3 className='text-7xl text-blue-500'/>
