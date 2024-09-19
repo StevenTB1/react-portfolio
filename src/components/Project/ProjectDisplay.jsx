@@ -1,6 +1,6 @@
-import SaveSquad from '../../assets/images/SaveSquad.png';
+import SaveSquad from '../../assets/images/savesquad.png';
 import Portfolio from '../../assets/images/website.png';
-import BlueK from '../../assets/images/BlueK.jpg';
+import BlueK from '../../assets/images/bluek.jpg';
 import {Link} from 'react-router-dom'
 import React from 'react'
 import { ExternalLink } from 'lucide-react';
